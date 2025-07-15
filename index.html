@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strobbe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab-container">
+                <div id="tab2" class="tab">
+                <a href="#tab2">Conectores 2 Piezas</a>
+                <div class="tab-content">
+                    <div class="top-section">
+                        <div class="dropdown-group">
+                            <select id="tipoManguera2" class="dropdown">
+                                <option value="" disabled selected>Tipo Manguera</option>
+                            </select>
+                            <select id="tipoFerula" class="dropdown" disabled>
+                                <option value="">Tipo Férula</option>
+                            </select>
+                            <select id="tamaño2" class="dropdown" disabled>
+                                <option value="">Tamaño</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="number-display">
+                        22
+                    </div>
+                    <div class="email-section">
+                        <p>¿Deseas conocer otras opciones?</p>
+                        <input type="email" placeholder="E-mail">
+                        <button>Enviar</button>
+                    </div>
+                    <div class="results-section">
+                        <div class="result-item">
+                            <div class="placeholder-image"></div>
+                            <div class="placeholder-text">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div> 
+                <div id="tab1" class="tab">
+                <a href="#tab1">Conectores Prearmados</a>
+                <div class="tab-content">
+                    <div class="top-section">
+                        <div class="dropdown-group">
+                            <select id="tipoManguera" class="dropdown">
+                                <option value="" disabled selected>Tipo Manguera</option>
+                            </select>
+                            <select id="tipoConector" class="dropdown" disabled>
+                                <option value="">Tipo Conector</option>
+                            </select>
+                            <select id="tamaño" class="dropdown" disabled>
+                                <option value="">Tamaño</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="number-display">
+                        24
+                    </div>
+                    <div class="email-section">
+                        <p>¿Deseas conocer otras opciones?</p>
+                        <input type="email" placeholder="E-mail">
+                        <button>Enviar</button>
+                    </div>
+                    <div class="results-section">
+                        <div class="result-item">
+                            <div class="placeholder-image"></div>
+                            <div class="placeholder-text">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Conectores Prearmados
+  const data = {
+    "HARDCOVER R1AT/1SN": {
+      "MEGAFIT 210": {
+        "1/4”": "16.9 mm",
+        "3/8”": "20.6 mm",
+        "1/2”": "23.8 mm",
+        "5/8”": "26.6 mm",
+        "3/4”": "31.7 mm",
+        "1”": "39.7 mm"
+      }
+    },
+    "HARDCOVER R17": {
+      "MEGAFIT 210": {
+        "1/4”": "17.5 mm",
+        "3/8”": "21.5 mm",
+        "1/2”": "24.0 mm"
+      }
+    },
+    "HARDCOVER R2AT/2SN": {
+      "MEGAFIT 210": {
+        "1/4”": "17.7 mm",
+        "3/8”": "22.2 mm",
+        "1/2”": "24.8 mm",
+        "5/8”": "28.1 mm",
+        "3/4”": "33.0 mm",
+        "1”": "41.7 mm",
+        "1 1/4”": "51.3 mm",
+        "1 1/2”": "59.4 mm",
+        "2”": "70.7 mm"
+      },
+        "XTRAFIT 223": {
+        "1/4”": "18.0 mm",
+        "3/8”": "23.0 mm",
+        "1/2”": "27.0 mm",
+        "5/8”": "30.5 mm",
+        "3/4”": "34.2 mm",
+        "1”": "40.5 mm",
+        "1 1/4”": "51.3 mm",
+        "1 1/2”": "59.0 mm",
+        "2”": "74.0 mm"
+      }
+    },
+    "HARDCOVER R16/2SC": {
+        "MEGAFIT 210": {
+        "1/4”": "17.2 mm",
+        "3/8”": "21.2 mm",
+        "1/2”": "23.8 mm",
+        "5/8”": "27.6 mm",
+        "3/4”": "33.5 mm",
+        "1”": "41.2 mm"
+      },
+        "XTRAFIT 223": {
+        "1/4”": "17.5 mm",
+        "3/8”": "23.0 mm",
+        "1/2”": "26.5 mm",
+        "5/8”": "31.0 mm",
+        "3/4”": "34.5 mm",
+        "1”": "41.0 mm"
+      },
+    },
+    "HARDCOVER EHT R2AT/2SN": {
+        "MEGAFIT 210": {
+        "1/4”": "17.7 mm",
+        "3/8”": "22.2 mm",
+        "1/2”": "24.8 mm",
+        "5/8”": "28.1 mm",
+        "3/4”": "33.0 mm",
+        "1”": "41.7 mm",
+        "1 1/4”": "51.3 mm",
+        "1 1/2”": "59.4 mm",
+        "2”": "70.7 mm"
+      },
+        "XTRAFIT 223": {
+        "1/4”": "18.0 mm",
+        "3/8”": "23.0 mm",
+        "1/2”": "27.0 mm",
+        "5/8”": "30.5 mm",
+        "3/4”": "34.2 mm",
+        "1”": "40.5 mm",
+        "1 1/4”": "51.3 mm",
+        "1 1/2”": "59.0 mm",
+        "2”": "74.0 mm"
+      },
+    },
+    "HARDCOVER R12": {
+        "MEGAFIT 210": {
+        "3/8”": "22.7 mm",
+        "1/2”": "25.5 mm",
+        "5/8”": "29.5 mm",
+        "3/4”": "34.0 mm",
+        "1”": "41.5 mm",
+        "1 1/4”": "51.0 mm",
+        "1 1/2”": "60.0 mm",
+        "2”": "72.0 mm"
+      },
+        "XTRAFIT 223": {
+        "3/8”": "24.0 mm",
+        "1/2”": "27.5 mm",
+        "5/8”": "31.5 mm",
+        "3/4”": "34.7 mm",
+        "1”": "41.7 mm",
+        "1 1/4”": "50.5 mm",
+        "1 1/2”": "60.0 mm",
+        "2”": "73.7 mm"
+      },
+    },
+    "HARDCOVER MARINE R12": {
+        "XTRAFIT 223": {
+        "1”": "41.7 mm",
+        "1 1/4”": "50.5 mm",
+        "1 1/2”": "60.0 mm"
+      }
+    },
+    "HARDCOVER 4SP": {
+        "XTRAFIT 223": {
+        "3/8”": "24.0 mm",
+        "1/2”": "27.0 mm",
+        "5/8”": "31.5 mm",
+        "3/4”": "36.0 mm",
+        "1”": "42.5 mm"
+      }
+    },
+    "HARDCOVER 4SH": {
+        "XTRAFIT 223": {
+        "5/8”": "31.5 mm",
+        "3/4”": "35.5 mm",
+        "1”": "42.7 mm",
+        "1 1/4”": "50.0 mm",
+        "1 1/2”": "59.5 mm",
+        "2”": "74.5 mm"
+      },
+        "SPIRALFIT 240": {
+        "3/4”": "38.0 mm",
+        "1”": "45.0 mm",
+        "1 1/4”": "52.0 mm",
+        "1 1/2”": "61.5 mm",
+        "2”": "74.5 / 75.5 mm"
+      },
+    },
+    "HARDCOVER R13": {
+        "SPIRALFIT 240": {
+        "3/4”": "38.0 mm",
+        "1”": "45.0 mm",
+        "1 1/4”": "56.0 mm",
+        "1 1/2”": "63.5 mm",
+        "2”": "78.0 / 79.0 mm"
+      }
+    },
+    "HARDCOVER R15": {
+        "SPIRALFIT 240": {
+        "3/4”": "38.0 mm",
+        "1”": "45.0 mm",
+        "1 1/4”": "56.0 mm",
+        "1 1/2”": "63.5 mm",
+        "2”": "78.0 / 79.0 mm"
+      }
+    },
+    "PREMIUM R2AT/2SN": {
+        "MEGAFIT 210": {
+        "1/4”": "17.7 mm",
+        "3/8”": "22.2 mm",
+        "1/2”": "24.8 mm",
+        "5/8”": "28.1 mm",
+        "3/4”": "33.0 mm",
+        "1”": "41.7 mm",
+        "1 1/4”": "51.3 mm"
+        },
+        "XTRAFIT 223": {
+        "1/4”": "18.0 mm",
+        "3/8”": "23.0 mm",
+        "1/2”": "27.0 mm",
+        "5/8”": "30.5 mm",
+        "3/4”": "34.2 mm",
+        "1”": "40.5 mm",
+        "1 1/4”": "51.3 mm"
+        }
+    },
+    "PREMIUM R2AT/2SN HIGH PRESSURE" :{
+        "XTRAFIT 223": {
+        "1/2”": "27.0 mm",
+        }
+    },
+    "PREMIUM R12": {
+        "MEGAFIT 210": {
+        "3/8”": "22.7 mm",
+        "1/2”": "25.5 mm",
+        "5/8”": "29.5 mm",
+        "3/4”": "34.0 mm",
+        "1”": "41.5 mm",
+        "1 1/4”": "51.0 mm"
+        },
+        "XTRAFIT 223": {
+        "3/8”": "24.0 mm",
+        "1/2”": "27.5 mm",
+        "5/8”": "31.5 mm",
+        "3/4”": "34.7 mm",
+        "1”": "41.7 mm",
+        "1 1/4”": "50.5 mm"
+        }
+    },
+    "PREMIUM R2AT/2SN UAR": {
+        "MEGAFIT 210": {
+        "3/8”": "21.7 mm",
+        "1/2”": "24.8 mm",
+        "3/4”": "32.3 mm"
+        },
+        "XTRAFIT 223": {
+        "3/8”": "23.0 mm",
+        "1/2”": "27.0 mm",
+        "3/4”": "34.2 mm"
+        }
+    },
+    "PREMIUM R12 UAR": {
+        "MEGAFIT 210": {
+        "3/4”": "34.0 mm"
+        },
+        "XTRAFIT 223": {
+        "3/4”": "34.7 mm"
+        }
+    },
+    "PREMIUM 4SH": {
+        "XTRAFIT 223": {
+        "3/4”": "35.5 mm",
+        "1”": "42.7 mm",
+        "1 1/4”": "50.0 mm",
+        "1 1/2”": "59.5 mm",
+        "2”": "74.5 mm"
+      },
+        "SPIRALFIT 240": {
+        "3/4”": "38.0 mm",
+        "1”": "45.0 mm",
+        "1 1/4”": "52.0 mm",
+        "1 1/2”": "61.5 mm",
+        "2”": "74.5 / 75.5 mm"
+      },
+    },
+    "PREMIUM R13": {
+        "SPIRALFIT 240": {
+        "3/4”": "38.0 mm",
+        "1”": "45.0 mm",
+        "1 1/4”": "56.0 mm",
+        "1 1/2”": "63.5 mm",
+        "2”": "78.0 / 79.0 mm"
+      }
+    },
+    "PREMIUM R15": {
+        "SPIRALFIT 240": {
+        "3/4”": "38.0 mm",
+        "1”": "45.0 mm",
+        "1 1/4”": "56.0 mm",
+        "1 1/2”": "63.5 mm",
+      }
+    },
+    "PREMIUM ISOBARIC 6000": {
+        "SPIRALFIT 240": {
+        "2”": "78.0 / 79.0 mm"
+      }
+    },
+    "PREMIUM JACK HOSE": {
+        "XTRAFIT 223": {
+        "1/4”": "18.0 mm",
+        "3/8”": "23.0 mm"
+      }
+    },
+  };
+
+// Conectores 2 Piezas
+  const data2 = {
+     "HARDCOVER R1AT/1SN": {
+      "100.002": {
+        "3/16”": "14.0 mm",
+        "1/4”": "15.5 mm",
+        "5/16”": "17.9 mm",
+        "3/8”": "19.0 mm",
+        "1/2”": "23.2 mm",
+        "5/8”": "26.6 mm",
+        "3/4”": "30.2 mm",
+        "1”": "40.3 mm",
+        "1 1/4”": "47.3 mm",
+        "1 1/2”": "54.1 mm",
+        "2”": "67.0 mm"
+      },
+      "100.004": {
+        "1/4”": "16.4 mm",
+        "5/16”": "17.8 mm",
+        "3/8”": "20.3 mm",
+        "1/2”": "23.2 mm",
+        "5/8”": "26.6 mm",
+        "3/4”": "29.8 mm",
+        "1”": "38.2 mm",
+        "1 1/4”": "48.0 mm",
+        "1 1/2”": "55.8 mm",
+        "2”": "68.5 mm"
+      }
+    },
+    "HARDCOVER R17": {
+      "100.002": {
+        "1/4”": "16.0 mm",
+        "3/8”": "19.5 mm",
+        "1/2”": "23.7 mm"
+      },
+      "100.004": {
+        "1/4”": "16.5 mm",
+        "3/8”": "20.5 mm",
+        "1/2”": "22.7 mm"
+      }
+    },
+    "HARDCOVER R2AT/2SN": {
+      "100.004": {
+        "1/4”": "17.7 mm",
+        "5/16”": "18.7 mm",
+        "3/8”": "21.4 mm",
+        "1/2”": "24.0 mm",
+        "5/8”": "27.1 mm",
+        "3/4”": "31.3 mm",
+        "1”": "39.3 mm",
+        "1 1/4”": "51.0 mm",
+        "1 1/2”": "58.0 mm",
+        "2”": "71.0 mm"
+      },
+      "100.008": {
+        "3/8”": "22.0 mm",
+        "1/2”": "25.0 mm",
+        "5/8”": "28.0 mm",
+        "3/4”": "33.0 mm",
+        "1”": "41.7 mm",
+        "1 1/4”": "51.0 mm",
+        "1 1/2”": "60.0 mm",
+        "2”": "73.0 mm"
+      }
+    },
+    "HARDCOVER EHT R2AT/2SN": {
+      "100.004": {
+        "1/4”": "17.7 mm",
+        "3/8”": "21.4 mm",
+        "1/2”": "24.0 mm",
+        "5/8”": "27.1 mm",
+        "3/4”": "31.3 mm",
+        "1”": "39.3 mm",
+        "1 1/4”": "51.0 mm",
+        "1 1/2”": "58.0 mm",
+        "2”": "71.0 mm"
+      }
+    },
+    "HARDCOVER R12": {
+      "100.008": {
+        "3/8”": "22.7 mm",
+        "1/2”": "26.0 mm",
+        "5/8”": "29.5 mm",
+        "3/4”": "34.0 mm",
+        "1”": "41.5 mm",
+        "1 1/4”": "51.0 mm",
+        "1 1/2”": "60.0 mm",
+        "2”": "73.0 mm"
+      },
+      "100.012": {
+        "3/8”": "22.7 mm",
+        "1/2”": "26.4 mm",
+        "5/8”": "29.4 mm",
+        "3/4”": "33.4 mm",
+        "1”": "41.3 mm",
+        "1 1/4”": "49.5 mm",
+        "1 1/2”": "58.3 mm",
+        "2”": "71.1 mm"
+      }
+    },
+    "HARDCOVER 4SP": {
+      "100.012": {
+        "3/8”": "22.7 mm",
+        "1/2”": "26.1 mm",
+        "5/8”": "28.5 mm",
+        "3/4”": "33.9 mm",
+        "1”": "41.3 mm"
+      }
+    },
+    "HARDCOVER LONGITUD DE PELADO EXTERIOR": {
+      "100.012": {
+        "3/8”": "27 mm",
+        "1/2”": "28 mm",
+        "5/8”": "32 mm",
+        "3/4”": "32 mm",
+        "1”": "42 mm",
+        "1 1/4”": "49 mm",
+        "1 1/2”": "55 mm",
+        "2”": "59 mm"
+      }
+    },
+    "TERMOPLÁSTICAS R7 PLUS": {
+      "100.022": {
+        "3/16”": "11.2 mm",
+        "1/4”": "13.6 mm",
+        "5/16”": "16.2 mm",
+        "3/8”": "18.8 mm",
+        "1/2”": "22.6 mm"
+      }
+    },
+    "TERMOPLÁSTICAS MTH1": {
+      "100.002": {
+        "3/16”": "12.5 mm",
+        "1/4”": "14.5 mm",
+        "3/8”": "18.4 mm",
+        "1/2”": "21.9 mm"
+      }
+    },
+    "TERMOPLÁSTICAS MTH1 MELLIZA": {
+      "100.002": {
+        "1/4”": "14.5 mm",
+        "3/8”": "18.4 mm"
+      }
+    },
+    "TERMOPLÁSTICAS PTFE LISO INOX 304": {
+      "100.024": {
+        "3/16”": "10.5 mm",
+        "1/4”": "11.9 mm",
+        "5/16”": "13.9 mm",
+        "3/8”": "15.9 mm",
+        "13/32”": "17.0 mm",
+        "1/2”": "19.9 mm",
+        "5/8”": "22.6 mm",
+        "3/4”": "26.7 mm",
+        "1”": "33.4 mm"
+      }
+    },
+    "TERMOPLÁSTICAS PTFE CORRUGADO INOX 304": {
+      "100.022": {
+        "3/8”": "17.2 mm",
+        "1/2”": "20.4 mm",
+        "5/8”": "24.4 mm",
+        "3/4”": "27.2 mm",
+        "1”": "34.5 mm"
+      }
+    },
+    "OTRAS APLICACIONES R4": {
+      "100.030": {
+        "3/4”": "34.0 mm",
+        "1”": "42.0 mm",
+        "1 1/4”": "49.0 mm",
+        "1 1/2”": "56.0 mm",
+        "2”": "70.0 mm"
+      }
+    },
+    "OTRAS APLICACIONES R6 MULTIPURPOSE": {
+      "100.022": {
+        "1/4”": "14.6 mm",
+        "5/16”": "16.9 mm",
+        "3/8”": "19.5 mm",
+        "1/2”": "22.1 mm",
+        "5/8”": "26.2 mm",
+        "3/4”": "29.5 mm",
+        "7/8”": "33.6 mm",
+        "1”": "38.0 mm"
+      }
+    },
+    "OTRAS APLICACIONES R6 HIGH PRESSURE MULTIPURPOSE": {
+      "100.022": {
+        "1/4”": "14.6 mm",
+        "5/16”": "16.9 mm",
+        "3/8”": "19.5 mm",
+        "1/2”": "22.1 mm",
+        "5/8”": "26.2 mm",
+        "3/4”": "29.5 mm",
+        "7/8”": "33.6 mm",
+        "1”": "38.0 mm"
+      }
+    },
+
+  }
+</script>
+</html>
+
