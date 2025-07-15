@@ -80,3 +80,31 @@ const tamaño2 = document.getElementById("tamaño2");
       tamaño.disabled = true;
     }
   });
+
+// Mostrar el valor correspondiente cuando se selecciona el tamaño (Conectores Prearmados)
+tamaño.addEventListener("change", () => {
+  const tipo = tipoManguera.value;
+  const conector = tipoConector.value;
+  const medida = tamaño.value;
+
+  if (data[tipo] && data[tipo][conector] && data[tipo][conector][medida]) {
+    const resultado = data[tipo][conector][medida];
+    document.getElementById("resultado").textContent = resultado;
+  } else {
+    document.getElementById("resultado").textContent = "–";
+  }
+});
+
+// Mostrar el valor correspondiente cuando se selecciona el tamaño (Conectores 2 Piezas)
+tamaño2.addEventListener("change", () => {
+  const tipo = tipoManguera2.value;
+  const ferula = tipoFerula.value;
+  const medida = tamaño2.value;
+
+  if (data2[tipo] && data2[tipo][ferula] && data2[tipo][ferula][medida]) {
+    const resultado = data2[tipo][ferula][medida];
+    document.getElementById("resultado2").textContent = resultado;
+  } else {
+    document.getElementById("resultado2").textContent = "–";
+  }
+});
