@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function () {
 // Conectores Prearmados
 const tipoManguera = document.getElementById("tipoManguera");
 const tipoConector = document.getElementById("tipoConector");
@@ -37,8 +37,7 @@ const tamaño2 = document.getElementById("tamaño2");
     if (medidas) {
       tamaño.disabled = false;
       for (let medida in medidas) {
-        const diametro = medidas[medida];
-        tamaño.innerHTML += `<option value="${medida}">${medida} → ${diametro}</option>`;
+        tamaño.innerHTML += `<option value="${medida}">${medida}</option>`;
       }
     } else {
       tamaño.disabled = true;
@@ -73,8 +72,7 @@ const tamaño2 = document.getElementById("tamaño2");
     if (medidas) {
       tamaño2.disabled = false;
       for (let medida in medidas) {
-        const diametro = medidas[medida];
-        tamaño2.innerHTML += `<option value="${medida}">${medida} → ${diametro}</option>`;
+        tamaño2.innerHTML += `<option value="${medida}">${medida}</option>`;
       }
     } else {
       tamaño.disabled = true;
@@ -86,6 +84,9 @@ tamaño.addEventListener("change", () => {
   const tipo = tipoManguera.value;
   const conector = tipoConector.value;
   const medida = tamaño.value;
+
+  const resultadoEl = document.getElementById("resultado");
+  const extraEl = document.getElementById("extra");
 
   if (data[tipo] && data[tipo][conector] && data[tipo][conector][medida]) {
     const resultado = data[tipo][conector][medida];
@@ -108,3 +109,8 @@ tamaño2.addEventListener("change", () => {
     document.getElementById("resultado2").textContent = "–";
   }
 });
+
+
+
+
+})
