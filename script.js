@@ -90,9 +90,11 @@ tamaño.addEventListener("change", () => {
 
   if (data[tipo] && data[tipo][conector] && data[tipo][conector][medida]) {
     const resultado = data[tipo][conector][medida];
-    document.getElementById("resultado").textContent = resultado;
-  } else {
-    document.getElementById("resultado").textContent = "–";
+    resultadoEl.textContent = resultado.valor || resultado; // Si aún tienes strings
+      extraEl.textContent = resultado.extra || ""; // Muestra extra si existe
+    } else {
+      resultadoEl.textContent = "–";
+      extraEl.textContent = "";
   }
 });
 
