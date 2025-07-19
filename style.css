@@ -42,8 +42,8 @@ body {
 }
 
 .dropdown:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(194, 214, 240, 0.774);
     outline: none;
 }
 
@@ -51,7 +51,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 50px;
-    color: #333;
+    color: #ffffff;
 }
 
 .email-section {
@@ -64,7 +64,7 @@ body {
 .email-section p {
     margin-bottom: 10px;
     font-size: 0.9rem;
-    color: #555;
+    color: #ffffff;
 }
 
 .email-section input {
@@ -78,7 +78,7 @@ body {
 
 .email-section button {
     padding: 10px 30px;
-    background-color: #007bff; /* Example button color */
+    background-color: #4fa3e5; /* button color */
     color: white;
     border: none;
     border-radius: 12px;
@@ -87,7 +87,7 @@ body {
 }
 
 .email-section button:hover {
-    background-color: #0056b3;
+    background-color: #aec7db;
 }
 
 .results-section {
@@ -139,6 +139,7 @@ body {
 }
 .tab>a {
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #aec7db;
 }
 
 .tab:target .tab-content, .tab:last-of-type .tab-content {
@@ -150,9 +151,9 @@ body {
 }
 /* parámetros para configurar las pestañas */
 :root {
-  --tabs-border-color: #ABCDEF;
+  --tabs-border-color: #3b79ac;
   --tabs-border-size: 3px;
-  --tabs-dark-color: #abcdef;
+  --tabs-dark-color: #3b79ac;
   --tabs-width: 170px;
   --tabs-height: 60px;
 }
@@ -166,8 +167,10 @@ h2, p {
   margin: 0;
 } 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+  font-size: 18px;
+  text-shadow: 1px 1px 4px rgba(15, 15, 15, 25);
 } 
 .tabs * {
   box-sizing: border-box;
@@ -201,7 +204,7 @@ a {
   color: black;
 }
 .tab-content {
-  background-color: #ffffff; 
+  background-color: #3b79ac; 
   padding: 45px 20px 20px;
   border: var(--tabs-border-size) solid var(--tabs-border-color);
   border-radius: 0 0 10px 10px;
@@ -215,11 +218,11 @@ a {
   border-bottom: 0;
 }
 .tab:target>a, .tab:last-of-type>a {
-  background-color: #abcdef; 
+  background-color: #3b79ac; 
   z-index: 100;
 }
 .tab:target ~ .tab:last-of-type>a {
-  background-color: #ffffff; 
+  background-color: #aec7db; 
   z-index: 0; 
 }
 
