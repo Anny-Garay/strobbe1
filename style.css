@@ -225,6 +225,15 @@ a {
   background-color: #aec7db; 
   z-index: 0; 
 }
+#mensajeEspecial {
+  color: #d0e8ff;
+  font-size: 12px;
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+
 
 /* Adjustments for responsiveness */
 @media (max-width: 768px) {

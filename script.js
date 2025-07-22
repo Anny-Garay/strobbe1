@@ -86,15 +86,26 @@ tamaño.addEventListener("change", () => {
   const medida = tamaño.value;
 
   const resultadoEl = document.getElementById("resultado");
+  const mensajeEspecial = document.getElementById("mensajeEspecial");
   const extraEl = document.getElementById("extra");
 
   if (data[tipo] && data[tipo][conector] && data[tipo][conector][medida]) {
     const resultado = data[tipo][conector][medida];
-    resultadoEl.textContent = resultado.valor || resultado; // Si aún tienes strings
-      extraEl.textContent = resultado.extra || ""; // Muestra extra si existe
+    resultadoEl.textContent = resultado.valor || resultado;
+      extraEl.textContent = resultado.extra || ""; 
+      // Mostrar el mensaje especial si existe
+    if (resultado.especial) {
+      mensajeEspecial.textContent = resultado.especial;
+      mensajeEspecial.style.display = "block";
+    } else {
+      mensajeEspecial.textContent = "";
+      mensajeEspecial.style.display = "none";
+    }
     } else {
       resultadoEl.textContent = "–";
       extraEl.textContent = "";
+      mensajeEspecial.textContent = "";
+      mensajeEspecial.style.display = "none";
   }
 });
 
