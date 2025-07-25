@@ -88,6 +88,7 @@ tamaño.addEventListener("change", () => {
   const resultadoEl = document.getElementById("resultado");
   const mensajeEspecial = document.getElementById("mensajeEspecial");
   const extraEl = document.getElementById("extra");
+  const imgConector = document.getElementById("imgConector");
 
   if (data[tipo] && data[tipo][conector] && data[tipo][conector][medida]) {
     const resultado = data[tipo][conector][medida];
@@ -100,6 +101,13 @@ tamaño.addEventListener("change", () => {
     } else {
       mensajeEspecial.textContent = "";
       mensajeEspecial.style.display = "none";
+    }
+      //Resultado de imagen
+    if (resultado.imagen) {
+      imgConector.src = resultado.imagen;
+      imgConector.style.display = "block";
+    } else {
+        imgConector.style.display = "none";
     }
     } else {
       resultadoEl.textContent = "–";

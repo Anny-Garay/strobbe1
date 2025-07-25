@@ -12,45 +12,33 @@
       <div class="tabs">
         <div class="tab-container">
           <div id="tab2" class="tab">
-          <a href="#tab2">Conectores 2 Piezas</a>
+          <a class="temas" href="#tab2">Conectores 2 Piezas</a>
           <div class="tab-content">
-              <div class="top-section">
-                  <div class="dropdown-group">
-                      <select id="tipoManguera2" class="dropdown">
-                          <option value="" disabled selected>Tipo Manguera</option>
-                      </select>
-                      <select id="tipoFerula" class="dropdown" disabled>
-                          <option value="">Tipo Férula</option>
-                      </select>
-                      <select id="tamaño2" class="dropdown" disabled>
-                          <option value="">Tamaño</option>
-                      </select>
-                  </div>
-              </div>
-              <div class="number-display" id="resultado2">
-                  <!--:3-->
-              </div>
-              <div class="email-section">
-                  <p>¿Deseas conocer otras opciones?</p>
-                  <input type="email" placeholder="E-mail">
-                  <button>Enviar</button>
-              </div>
-              <div class="results-section">
-                  <div class="result-item">
-                      <div class="placeholder-image"></div>
-                      <div class="placeholder-text">
-                          <p></p>
-                          <p></p>
-                          <p></p>
-                          <p></p>
-                          <p></p>
-                      </div>
-                  </div>
-              </div>
+            <div class="top-section">
+                <div class="dropdown-group">
+                    <select id="tipoManguera2" class="dropdown">
+                        <option value="" disabled selected>Tipo Manguera</option>
+                    </select>
+                    <select id="tipoFerula" class="dropdown" disabled>
+                        <option value="">Tipo Férula</option>
+                    </select>
+                    <select id="tamaño2" class="dropdown" disabled>
+                        <option value="">Tamaño</option>
+                    </select>
+                </div>
+            </div>
+            <div class="number-display" id="resultado2">
+                0 mm
+            </div>
+            <div class="email-section">
+                <p>¿Deseas conocer otras opciones?</p>
+                <input type="email" placeholder="E-mail">
+                <button>Enviar</button>
+            </div>
           </div>
           </div> 
           <div id="tab1" class="tab">
-            <a href="#tab1">Conectores Prearmados</a>
+            <a class="temas" href="#tab1">Conectores Prearmados</a>
             <div class="tab-content">
               <div class="top-section">
                   <div class="dropdown-group">
@@ -66,28 +54,20 @@
                   </div>
               </div>
               <div class="number-display" id="resultado">
-                <!--:O-->
+                0 mm
               </div>
               <div id="mensajeEspecial"></div>
-              <div class="number-display" id="extra">
-                <!--:3-->
+              <div style="margin-bottom: 10px; display: inline-block; margin-top: 45px;">
+                <img id="imgConector" class="conector" src="img/prueba.png" alt="Imagen del conector" >
               </div>
+              <div class="number-display" id="extra">
+                0
+              </div>
+              <p class="number-display-p">Diámetros de Prensado</p>
               <div class="email-section">
                 <p>¿Deseas conocer otras opciones?</p>
                 <input type="email" placeholder="E-mail">
                 <button>Enviar</button>
-              </div>
-              <div class="results-section">
-                <div class="result-item">
-                  <div class="placeholder-image"></div>
-                  <div class="placeholder-text">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -100,8 +80,8 @@
   const data = {
     "HARDCOVER R1AT/1SN": {
       "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "16.9 mm", "extra": "22" },
-        "(-6) 3/8”": { "valor": "20.6 mm", "extra": "25" },
+        "(-4) 1/4”": { "valor": "16.9 mm", "extra": "22", "imagen": "img/conector1.png"},
+        "(-6) 3/8”": { "valor": "20.6 mm", "extra": "25", "imagen": "img/conector2.png" },
         "(-8) 1/2”": { "valor": "23.8 mm", "extra": "28" },
         "(-10) 5/8”": { "valor": "26.6 mm", "extra": "30" },
         "(-12) 3/4”": { "valor": "31.7 mm", "extra": "33" },
