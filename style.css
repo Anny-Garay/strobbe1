@@ -12,7 +12,6 @@ body {
     width: 100%;
     background-color: #fff;
     padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     flex-direction: column;
     align-items: center;
@@ -48,9 +47,8 @@ body {
 }
 
 .number-display {
-    font-size: 3rem;
+    font-size: 36px;
     font-weight: bold;
-    margin-top: 50px;
     margin-bottom: 10px;
     color: #ffffff;
 }
@@ -143,7 +141,7 @@ body {
 }
 
 .conector{
-  margin-bottom: -50px;
+  margin-bottom: -10px;
   border-radius: 6px;
 }
 
@@ -154,7 +152,6 @@ body {
     margin-top: 45px;
     margin-bottom: -50px;
 }*/
-
 .tab-content {
   display: none;
 }
@@ -226,11 +223,10 @@ h2, p {
 }
 .tab-content {
   background-color: #3b79ac; 
-  padding: 45px 20px 20px;
+  padding: 35px 20px 20px;
   border: var(--tabs-border-size) solid var(--tabs-border-color);
   border-radius: 0 0 10px 10px;
   position: relative;
-  z-index: 100;
 }
 .tab>a {
   padding: 10px;
@@ -240,7 +236,6 @@ h2, p {
 }
 .tab:target>a, .tab:last-of-type>a {
   background-color: #3b79ac; 
-  z-index: 100;
 }
 .tab:target ~ .tab:last-of-type>a {
   background-color: #aec7db; 
