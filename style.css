@@ -2,16 +2,15 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    overflow-y: auto;
 }
 
 .container {
     width: 100%;
     background-color: #fff;
-    padding: 30px;
+    padding: 10px;
     border-radius: 8px;
     flex-direction: column;
     align-items: center;
@@ -33,7 +32,7 @@ body {
     padding: 8px 30px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 15px;
     min-width: 150px;
     text-align: center;
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -47,7 +46,7 @@ body {
 }
 
 .number-display {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #ffffff;
@@ -57,7 +56,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .email-section p {
@@ -67,7 +65,7 @@ body {
 }
 
 .email-section input {
-    padding: 10px;
+    padding: 7px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -76,7 +74,7 @@ body {
 }
 
 .email-section button {
-    padding: 10px 30px;
+    padding: 7px 28px;
     background-color: #4fa3e5; /* button color */
     color: white;
     border: none;
@@ -136,8 +134,11 @@ body {
 .number-display-p{
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 50px;
     color: #ffffff;
+    margin-top: 20px;
+}
+.correo{
+    margin-top: 55px;
 }
 
 .conector{
@@ -152,6 +153,7 @@ body {
     margin-top: 45px;
     margin-bottom: -50px;
 }*/
+
 .tab-content {
   display: none;
 }
@@ -160,26 +162,23 @@ body {
     background-color: #aec7db;
 }
 
-.tab:target .tab-content, .tab:last-of-type .tab-content {
-  display: block;
-}
-
-.tab:target ~ .tab:last-of-type .tab-content {
+.tab-content {
   display: none;
+}
+.tab:target .tab-content {
+  display: block;
 }
 /* parámetros para configurar las pestañas */
 :root {
   --tabs-border-color: #3b79ac;
-  --tabs-border-size: 3px;
   --tabs-dark-color: #3b79ac;
-  --tabs-width: 170px;
-  --tabs-height: 60px;
+  --tabs-width: 150px;
+  --tabs-height: 55px;
 }
 
 /* aspecto básico */
 body {
   font-family: sans-serif;
-  line-height: 1.2;
 }
 h2, p {
   margin: 0;
@@ -197,6 +196,7 @@ h2, p {
 /* esto es para posicionar las pestañas correctamente */
 .tab-container {
   position: relative;
+  overflow: hidden;
   padding-top: var(--tabs-height); /* en esta zona colocaremos las pestañas */
 } 
 #tab1>a { --tabs-position: 0; }
@@ -230,7 +230,6 @@ h2, p {
 }
 .tab>a {
   padding: 10px;
-  border: var(--tabs-border-size) solid var(--tabs-border-color);
   border-radius: 10px 10px 0 0;
   border-bottom: 0;
 }
@@ -245,10 +244,7 @@ h2, p {
   color: #d0e8ff;
   font-size: 12px;
   text-align: center;
-  margin-bottom: 20px;
 }
-
-
 
 /* Adjustments for responsiveness */
 @media (max-width: 768px) {
@@ -260,6 +256,7 @@ h2, p {
     .dropdown {
         min-width: unset;
         width: 100%;
+        padding: 5px 30px;
     }
 
     .result-item {
@@ -274,11 +271,11 @@ h2, p {
 
 @media (max-width: 480px) {
     .container {
-        padding: 20px;
+        padding: 10px;
     }
 
     .number-display {
-        font-size: 2.5rem;
+        font-size: 29px;
     }
 
     .email-section input {

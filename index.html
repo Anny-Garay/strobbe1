@@ -27,11 +27,12 @@
                     </select>
                 </div>
             </div>
+            <p class="number-display-p">Diámetros de Prensado</p>
             <div class="number-display" id="resultado2">
                 0 mm
             </div>
             <div class="email-section">
-                <p>¿Deseas conocer otras opciones?</p>
+                <p class="correo">¿Deseas conocer otras opciones?</p>
                 <input type="email" placeholder="E-mail">
                 <button>Enviar</button>
             </div>
@@ -53,6 +54,7 @@
                       </select>
                   </div>
               </div>
+              <p class="number-display-p">Diámetros de Prensado</p>
               <div class="number-display" id="resultado">
                 0 mm
               </div>
@@ -61,9 +63,8 @@
                 <img id="imgConector" class="conector" src="img/prueba.png" alt="Imagen del conector" >
               </div>
               <div class="number-display" id="extra">
-                0
+                0 mm
               </div>
-              <p class="number-display-p">Diámetros de Prensado</p>
               <div class="email-section">
                 <p>¿Deseas conocer otras opciones?</p>
                 <input type="email" placeholder="E-mail">
@@ -80,265 +81,265 @@
   const data = {
     "HARDCOVER R1AT/1SN": {
       "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "16.9 mm", "extra": "22", "imagen": "img/conector1.png"},
-        "(-6) 3/8”": { "valor": "20.6 mm", "extra": "25", "imagen": "img/conector2.png" },
-        "(-8) 1/2”": { "valor": "23.8 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "26.6 mm", "extra": "30" },
-        "(-12) 3/4”": { "valor": "31.7 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "39.7 mm", "extra": "43" }
+        "(-4) 1/4”": { "valor": "16.9 mm", "extra": "22 mm", "imagen": "img/conector1.png"},
+        "(-6) 3/8”": { "valor": "20.6 mm", "extra": "25 mm", "imagen": "img/conector2.png" },
+        "(-8) 1/2”": { "valor": "23.8 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "26.6 mm", "extra": "30 mm" },
+        "(-12) 3/4”": { "valor": "31.7 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "39.7 mm", "extra": "43 mm" }
       }
     },
     "HARDCOVER R17": {
       "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "17.5 mm", "extra": "22" },
-        "(-6) 3/8”": { "valor": "21.5 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "24.0 mm", "extra": "28" }
+        "(-4) 1/4”": { "valor": "17.5 mm", "extra": "22 mm" },
+        "(-6) 3/8”": { "valor": "21.5 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "24.0 mm", "extra": "28 mm" }
       }
     },
     "HARDCOVER R2AT/2SN": {
       "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "17.7 mm", "extra": "22" },
-        "(-6) 3/8”": { "valor": "22.2 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "28.1 mm", "extra": "30" },
-        "(-12) 3/4” ": { "valor": "33.0 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "41.7 mm", "extra": "43" },
-        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "45" },
-        "(-24) 1 1/2”": { "valor": "59.4 mm", "extra": "53" },
-        "(-32 / -32 ND) 2”": { "valor": "70.7 mm", "extra": "58", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-4) 1/4”": { "valor": "17.7 mm", "extra": "22 mm" },
+        "(-6) 3/8”": { "valor": "22.2 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "28.1 mm", "extra": "30 mm" },
+        "(-12) 3/4” ": { "valor": "33.0 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "41.7 mm", "extra": "43 mm" },
+        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "45 mm" },
+        "(-24) 1 1/2”": { "valor": "59.4 mm", "extra": "53 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "70.7 mm", "extra": "58 mm", "especial": "(*)ND = Nuevo Diseño", "imagen": "img/conector1.png"  }
       },
         "XTRAFIT 223": {
-        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21" },
-        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "30.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "40.5 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "51" },
-        "(-24) 1 1/2”": { "valor": "59.0 mm", "extra": "57" },
-        "(-32 / -32 ND) 2”": { "valor": "74.0 mm", "extra": "67", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21 mm" },
+        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "30.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "40.5 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "51 mm" },
+        "(-24) 1 1/2”": { "valor": "59.0 mm", "extra": "57 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "74.0 mm", "extra": "67 mm", "especial": "(*)ND = Nuevo Diseño"  }
       }
     },
     "HARDCOVER R16/2SC": {
         "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "17.2 mm", "extra": "22" },
-        "(-6) 3/8”": { "valor": "21.2 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "23.8 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "27.6 mm", "extra": "30" },
-        "(-12) 3/4”": { "valor": "33.5 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "41.2 mm", "extra": "43" }
+        "(-4) 1/4”": { "valor": "17.2 mm", "extra": "22 mm" },
+        "(-6) 3/8”": { "valor": "21.2 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "23.8 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "27.6 mm", "extra": "30 mm" },
+        "(-12) 3/4”": { "valor": "33.5 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "41.2 mm", "extra": "43 mm" }
       },
         "XTRAFIT 223": {
-        "(-4) 1/4”": { "valor": "17.5 mm", "extra": "21" },
-        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "26.5 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "31.0 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "34.5 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "41.0 mm", "extra": "44" }
+        "(-4) 1/4”": { "valor": "17.5 mm", "extra": "21 mm" },
+        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "26.5 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "31.0 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "34.5 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "41.0 mm", "extra": "44 mm" }
       },
     },
     "HARDCOVER EHT R2AT/2SN": {
         "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "17.7 mm", "extra": "22" },
-        "(-6) 3/8”": { "valor": "22.2 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "28.1 mm", "extra": "30" },
-        "(-12) 3/4”": { "valor": "33.0 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "41.7 mm", "extra": "43" },
-        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "45" },
-        "(-24) 1 1/2”": { "valor": "59.4 mm", "extra": "53" },
-        "(-32 / -32 ND) 2”": { "valor": "70.7 mm", "extra": "58", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-4) 1/4”": { "valor": "17.7 mm", "extra": "22 mm" },
+        "(-6) 3/8”": { "valor": "22.2 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "28.1 mm", "extra": "30 mm" },
+        "(-12) 3/4”": { "valor": "33.0 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "41.7 mm", "extra": "43 mm" },
+        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "45 mm" },
+        "(-24) 1 1/2”": { "valor": "59.4 mm", "extra": "53 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "70.7 mm", "extra": "58 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
         "XTRAFIT 223": {
-        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21" },
-        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "30.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "40.5 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "51" },
-        "(-24) 1 1/2”": { "valor": "59.0 mm", "extra": "57" },
-        "(-32 / -32 ND) 2”": { "valor": "74.0 mm", "extra": "67", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21 mm" },
+        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "30.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "40.5 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "51 mm" },
+        "(-24) 1 1/2”": { "valor": "59.0 mm", "extra": "57 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "74.0 mm", "extra": "67 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
     },
     "HARDCOVER R12": {
         "MEGAFIT 210": {
-        "(-6) 3/8”": { "valor": "22.7 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "25.5 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "29.5 mm", "extra": "30" },
-        "(-12) 3/4”": { "valor": "34.0 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "41.5 mm", "extra": "43" },
-        "(-20) 1 1/4”": { "valor": "51.0 mm", "extra": "45" },
-        "(-24) 1 1/2”": { "valor": "60.0 mm", "extra": "53" },
-        "(-32 / -32 ND) 2”": { "valor": "72.0 mm", "extra": "58", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-6) 3/8”": { "valor": "22.7 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "25.5 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "29.5 mm", "extra": "30 mm" },
+        "(-12) 3/4”": { "valor": "34.0 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "41.5 mm", "extra": "43 mm" },
+        "(-20) 1 1/4”": { "valor": "51.0 mm", "extra": "45 mm" },
+        "(-24) 1 1/2”": { "valor": "60.0 mm", "extra": "53 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "72.0 mm", "extra": "58 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
         "XTRAFIT 223": {
-        "(-6) 3/8”": { "valor": "24.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.5 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "34.7 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "41.7 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "50.5 mm", "extra": "51" },
-        "(-24) 1 1/2”": { "valor": "60.0 mm", "extra": "57" },
-        "(-32 / -32 ND) 2”": { "valor": "73.7 mm", "extra": "67", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-6) 3/8”": { "valor": "24.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.5 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "34.7 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "41.7 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "50.5 mm", "extra": "51 mm" },
+        "(-24) 1 1/2”": { "valor": "60.0 mm", "extra": "57 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "73.7 mm", "extra": "67 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
     },
     "HARDCOVER MARINE R12": {
         "XTRAFIT 223": {
-        "(-16) 1”": { "valor": "41.7 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "50.5 mm", "extra": "51" },
-        "(-24) 1 1/2”": { "valor": "60.0 mm", "extra": "57" }
+        "(-16) 1”": { "valor": "41.7 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "50.5 mm", "extra": "51 mm" },
+        "(-24) 1 1/2”": { "valor": "60.0 mm", "extra": "57 mm" }
       }
     },
     "HARDCOVER 4SP": {
         "XTRAFIT 223": {
-        "(-6) 3/8”": { "valor": "20.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "36.0 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "42.5 mm", "extra": "44" }
+        "(-6) 3/8”": { "valor": "20.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "36.0 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "42.5 mm", "extra": "44 mm" }
       }
     },
     "HARDCOVER 4SH": {
         "XTRAFIT 223": {
-        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "35.5 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "42.7 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "50.0 mm", "extra": "51" },
-        "(-24) 1 1/2”": { "valor": "59.5 mm", "extra": "57" },
-        "(-32 / -32 ND) 2”": { "valor": "74.5 mm", "extra": "67", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "35.5 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "42.7 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "50.0 mm", "extra": "51 mm" },
+        "(-24) 1 1/2”": { "valor": "59.5 mm", "extra": "57 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "74.5 mm", "extra": "67 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
         "SPIRALFIT 240": {
-        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44" },
-        "(-16) 1”": { "valor": "45.0 mm", "extra": "48" },
-        "(-20) 1 1/4”": { "valor": "52.0 mm", "extra": "58" },
-        "(-24) 1 1/2”": { "valor": "61.5 mm", "extra": "76" },
-        "(-32 / -32 ND) 2”": { "valor": "74.5 / 75.5 mm", "extra": "88", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44 mm" },
+        "(-16) 1”": { "valor": "45.0 mm", "extra": "48 mm" },
+        "(-20) 1 1/4”": { "valor": "52.0 mm", "extra": "58 mm" },
+        "(-24) 1 1/2”": { "valor": "61.5 mm", "extra": "76 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "74.5 / 75.5 mm", "extra": "88 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
     },
     "HARDCOVER R13": {
         "SPIRALFIT 240": {
-        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44" },
-        "(-16) 1”": { "valor": "45.0 mm", "extra": "48" },
-        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58" },
-        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76" },
-        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44 mm" },
+        "(-16) 1”": { "valor": "45.0 mm", "extra": "48 mm" },
+        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58 mm" },
+        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88 mm", "especial": "(*)ND = Nuevo Diseño"  }
       }
     },
     "HARDCOVER R15": {
         "SPIRALFIT 240": {
-        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44" },
-        "(-16) 1”": { "valor": "45.0 mm", "extra": "48" },
-        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58" },
-        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76" },
-        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44 mm" },
+        "(-16) 1”": { "valor": "45.0 mm", "extra": "48 mm" },
+        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58 mm" },
+        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88 mm", "especial": "(*)ND = Nuevo Diseño"  }
       }
     },
     "PREMIUM R2AT/2SN": {
         "MEGAFIT 210": {
-        "(-4) 1/4”": { "valor": "17.7 mm", "extra": "22" },
-        "(-6) 3/8”": { "valor": "22.2 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "28.1 mm", "extra": "30" },
-        "(-12) 3/4”": { "valor": "33.0 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "41.7 mm", "extra": "43" },
-        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "45" }
+        "(-4) 1/4”": { "valor": "17.7 mm", "extra": "22 mm" },
+        "(-6) 3/8”": { "valor": "22.2 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "28.1 mm", "extra": "30 mm" },
+        "(-12) 3/4”": { "valor": "33.0 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "41.7 mm", "extra": "43 mm" },
+        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "45 mm" }
         },
         "XTRAFIT 223": {
-        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21" },
-        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "30.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "40.5 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "51" }
+        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21 mm" },
+        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "30.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "40.5 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "51.3 mm", "extra": "51 mm" }
         }
     },
     "PREMIUM R2AT/2SN HIGH PRESSURE" :{
         "XTRAFIT 223": {
-        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31" }
+        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31 mm" }
         }
     },
     "PREMIUM R12": {
         "MEGAFIT 210": {
-        "(-6) 3/8”": { "valor": "22.7 mm", "extra": "26" },
-        "(-8) 1/2”": { "valor": "25.5 mm", "extra": "28" },
-        "(-10) 5/8”": { "valor": "29.5 mm", "extra": "30" },
-        "(-12) 3/4”": { "valor": "34.0 mm", "extra": "33" },
-        "(-16) 1”": { "valor": "41.5 mm", "extra": "43" },
-        "(-20) 1 1/4”": { "valor": "51.0 mm", "extra": "45" }
+        "(-6) 3/8”": { "valor": "22.7 mm", "extra": "26 mm" },
+        "(-8) 1/2”": { "valor": "25.5 mm", "extra": "28 mm" },
+        "(-10) 5/8”": { "valor": "29.5 mm", "extra": "30 mm" },
+        "(-12) 3/4”": { "valor": "34.0 mm", "extra": "33 mm" },
+        "(-16) 1”": { "valor": "41.5 mm", "extra": "43 mm" },
+        "(-20) 1 1/4”": { "valor": "51.0 mm", "extra": "45 mm" }
         },
         "XTRAFIT 223": {
-        "(-6) 3/8”": { "valor": "24.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.5 mm", "extra": "31" },
-        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32" },
-        "(-12) 3/4”": { "valor": "34.7 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "41.7 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "50.5 mm", "extra": "51" }
+        "(-6) 3/8”": { "valor": "24.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.5 mm", "extra": "31 mm" },
+        "(-10) 5/8”": { "valor": "31.5 mm", "extra": "32 mm" },
+        "(-12) 3/4”": { "valor": "34.7 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "41.7 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "50.5 mm", "extra": "51 mm" }
         }
     },
     "PREMIUM R2AT/2SN UAR": {
         "MEGAFIT 210": {
-        "(-6) 3/8”": { "valor": "21.7 mm", "extra": "25" },
-        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28" },
-        "(-12) 3/4”": { "valor": "32.3 mm", "extra": "33" }
+        "(-6) 3/8”": { "valor": "21.7 mm", "extra": "25 mm" },
+        "(-8) 1/2”": { "valor": "24.8 mm", "extra": "28 mm" },
+        "(-12) 3/4”": { "valor": "32.3 mm", "extra": "33 mm" }
         },
         "XTRAFIT 223": {
-        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22" },
-        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31" },
-        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37" }
+        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22 mm" },
+        "(-8) 1/2”": { "valor": "27.0 mm", "extra": "31 mm" },
+        "(-12) 3/4”": { "valor": "34.2 mm", "extra": "37 mm" }
         }
     },
     "PREMIUM R12 UAR": {
         "MEGAFIT 210": {
-        "(-12) 3/4”": { "valor": "34.0 mm", "extra": "33" }
+        "(-12) 3/4”": { "valor": "34.0 mm", "extra": "33 mm" }
         },
         "XTRAFIT 223": {
-        "(-12) 3/4”": { "valor": "34.7 mm", "extra": "37" }
+        "(-12) 3/4”": { "valor": "34.7 mm", "extra": "37 mm" }
         }
     },
     "PREMIUM 4SH": {
         "XTRAFIT 223": {
-        "(-12) 3/4”": { "valor": "35.5 mm", "extra": "37" },
-        "(-16) 1”": { "valor": "42.7 mm", "extra": "44" },
-        "(-20) 1 1/4”": { "valor": "50.0 mm", "extra": "51" },
-        "(-24) 1 1/2”": { "valor": "59.5 mm", "extra": "57" },
-        "(-32 / -32 ND) 2”": { "valor": "74.5 mm", "extra": "67", "especial": "(*)ND = Nuevo Diseño"  },
+        "(-12) 3/4”": { "valor": "35.5 mm", "extra": "37 mm" },
+        "(-16) 1”": { "valor": "42.7 mm", "extra": "44 mm" },
+        "(-20) 1 1/4”": { "valor": "50.0 mm", "extra": "51 mm" },
+        "(-24) 1 1/2”": { "valor": "59.5 mm", "extra": "57 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "74.5 mm", "extra": "67 mm", "especial": "(*)ND = Nuevo Diseño"  },
       },
         "SPIRALFIT 240": {
-        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44" },
-        "(-16) 1”": { "valor": "45.0 mm", "extra": "48" },
-        "(-20) 1 1/4”": { "valor": "52.0 mm", "extra": "58" },
-        "(-24) 1 1/2”": { "valor": "61.5 mm", "extra": "76" },
-        "(-32 / -32 ND) 2”": { "valor": "74.5 / 75.5 mm", "extra": "88", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44 mm" },
+        "(-16) 1”": { "valor": "45.0 mm", "extra": "48 mm" },
+        "(-20) 1 1/4”": { "valor": "52.0 mm", "extra": "58 mm" },
+        "(-24) 1 1/2”": { "valor": "61.5 mm", "extra": "76 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "74.5 / 75.5 mm", "extra": "88 mm", "especial": "(*)ND = Nuevo Diseño"  }
       },
     },
     "PREMIUM R13": {
         "SPIRALFIT 240": {
-        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44" },
-        "(-16) 1”": { "valor": "45.0 mm", "extra": "48" },
-        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58" },
-        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76" },
-        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88", "especial": "(*)ND = Nuevo Diseño"  }
+        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44 mm" },
+        "(-16) 1”": { "valor": "45.0 mm", "extra": "48 mm" },
+        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58 mm" },
+        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76 mm" },
+        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88 mm", "especial": "(*)ND = Nuevo Diseño"  }
       }
     },
     "PREMIUM R15": {
         "SPIRALFIT 240": {
-        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44" },
-        "(-16) 1”": { "valor": "45.0 mm", "extra": "48" },
-        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58" },
-        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76" }
+        "(-12) 3/4”": { "valor": "38.0 mm", "extra": "44 mm" },
+        "(-16) 1”": { "valor": "45.0 mm", "extra": "48 mm" },
+        "(-20) 1 1/4”": { "valor": "56.0 mm", "extra": "58 mm" },
+        "(-24) 1 1/2”": { "valor": "63.5 mm", "extra": "76 mm" }
       }
     },
     "PREMIUM ISOBARIC 6000": {
         "SPIRALFIT 240": {
-        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88", "especial": "(*)ND = Nuevo Diseño" }
+        "(-32 / -32 ND) 2”": { "valor": "78.0 / 79.0 mm", "extra": "88 mm", "especial": "(*)ND = Nuevo Diseño" }
       }
     },
     "PREMIUM JACK HOSE": {
         "XTRAFIT 223": {
-        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21" },
-        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22" }
+        "(-4) 1/4”": { "valor": "18.0 mm", "extra": "21 mm" },
+        "(-6) 3/8”": { "valor": "23.0 mm", "extra": "22 mm" }
       }
     },
   };
